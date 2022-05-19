@@ -11,7 +11,7 @@ if inp=="1"and "2":
         quit()        
     elif int(inp)==1:
         
-     for i in range(27):     
+     for i in range(7):     
         a=input("Please Enter A To Z Word and find Meaning :")
         
         if a==""and 1!=len(a):
