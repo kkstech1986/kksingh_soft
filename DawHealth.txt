@@ -1,0 +1,3 @@
+2022-05-22 01:08:35.711838['Running30 Minits', 'Chakrasan30 Minits', 'Anulom Bilom30 Minits']
+2022-05-22 01:18:51.288853['Running30 Minits', 'Surya Namaskar30 Minits', 'Halasan30 Minits']
+2022-05-22 03:01:30.084655['Runnig30 Minits', 'Surya namaskar30 Minits', 'Anulom Bilom30 Minits']
