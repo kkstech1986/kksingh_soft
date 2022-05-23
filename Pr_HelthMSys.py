@@ -11,8 +11,7 @@ def TakeInp():
         return p
     else:
         print("pleae Enter valid name try again : ") 
-        print("****************************")
-              
+        print("****************************")             
         
 print("please Enter '1' for Food ,'2' for Exercise and '3' for ShowData")
 Food_Exercise=input("Enter your choice as above : ")     
