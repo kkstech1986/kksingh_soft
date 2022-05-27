@@ -1,0 +1,54 @@
+# singal level inheritance
+class Employee:
+    LeaveDetails=20     
+    def __init__(self,name,salary,department) -> None:
+        self.Name=name
+        self.Salary=salary
+        self.Department=department    
+     
+     ################################print data as formate in many time##############################
+    def printdata(self):
+        print(f"Yoyr Name : {self.Name}, salary are : {self.Salary} and department of {self.Department} ,leave :{self.LeaveDetails}")
+    ################################ chenge class varialbe by using of class instance and class also  this is chenge value of class variable ############################    
+    @classmethod 
+    def chengeleave(cls,newLeave):
+        cls.LeaveDetails=newLeave  
+     #Split stiring and return as a list and than pass a class instance value/object and same to send class init constructor
+    @staticmethod
+    def printGood(string):
+        print("This is Good",string)
+    @classmethod
+    def fromeString(cls,string):
+        empobj=string.split("-")
+        print(empobj)
+        #return cls(empobj[0],empobj[1],empobj[2]) # Traditional type value send to class by list index one by one
+        return cls(*string.split("-")) # this is one liner fucton use method of *args *queargs if not understand please see the video of * arge of code with harry in python
+# Singal Leval Inheritance                       
+class programmer(Employee) :
+    # this is a smart way to work
+    No_of_holidays=56 
+    def __init__(self, name, salary, department,languages) -> None:
+        super().__init__(name, salary, department)
+        self.languages=languages
+        
+    # this is simpal way to work  its work but not a propar way to define calass attribute
+    # def __init__(self,name,salary,department,languages):
+    #     self.Name=name
+    #     self.Salary=salary
+    #     self.Department=department
+    #     self.Languages=languages       
+        
+    def printprog(self):
+     return f"The programmers Name is : {self.Name}, salary is : {self.Salary},and department is : {self.Department},and lagualges is{self.languages}"   
+kks=Employee("krishna",30000,"service")
+kks.chengeleave(80)
+sro=Employee.fromeString("Saroj-30000-service")
+man=programmer.fromeString("manti-50000-finance-c++")
+pks=programmer("Pawan kumar",35000,"programmer","Python")
+kks.printdata()
+programmer.printdata(sro)
+man.printdata()
+print(kks.LeaveDetails)
+pks.printdata()
+print(pks.printprog())
+print(programmer.No_of_holidays)
