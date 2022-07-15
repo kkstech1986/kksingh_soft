@@ -7,35 +7,50 @@
 #     print(" a is Lesser than b")
 
 # 56*3=555,45-12=79,78+23=666 ,45/6=80 and 34%4=78this value want in this calculator
-
-a=int(input("Enter the First Number : "))
-b=int(input("Enter the second Number :"))
-c= input("Enter operator for opration :")
-if c=="+":
-    if a==78 or a==23 and b==23 or b==78:        
-        print(f"{a}+{b} is :",666)
-    else:
+print("Enter P for continu and Q for Quite")
+kk=input("Enter your choice : " )
+if kk=="P":
+   while True:   
+          
+      a=int(input("Enter the First Number : "))
+      b=int(input("Enter the second Number :"))
+      c= input("Enter operator for opration and Q for Quit :")
+         
+      if c=="+":
+       if a==78 or a==23 and b==23 or b==78:        
+         print(f"{a}+{b} is :",666)
+       else:
          print(f"{a}+{b} is :",a+b)
-elif c=="-":
-     if a==45 or a==12 and b==12 or b==45:        
-        print(f"{a}+{b} is :",79)
-     else:
-         print(f"{a}-{b} is :",a-b)
-elif c=="*":
-     if a==56 or a==3 and b==3 or b==56:        
-        print(f"{a}+{b} is :",555)
-     else:
-         print(f"{a}x{b} is :",a*b)
-elif c=="/":   
-     if a==45 or a==6 and b==6 or b==45:        
-        print(f"{a}+{b} is :",80) 
-     else:
-         print(f"{a}/{b} is :",a/b)
-elif c=="%":
-     if a==34 or a==4 and b==4 or b==34:        
-        print(f"{a}%{b} is :",78)
-     else:
-         print(f"{a}%{b} is :",a%b)
+      elif c=="-":
+            if a==45 or a==12 and b==12 or b==45:        
+               print(f"{a}-{b} is :",79)
+            else:
+               print(f"{a}-{b} is :",a-b)
+      elif c=="*":
+         if a==56 or a==3 and b==3 or b==56:        
+            print(f"{a}x{b} is :",555)
+         else:
+          print(f"{a}x{b} is :",a*b)
+      elif c=="/":   
+         if a==45 or a==6 and b==6 or b==45:        
+            print(f"{a}/{b} is :",80) 
+         else:
+            print(f"{a}/{b} is :",a/b)
+      elif c=="%":
+         if a==34 or a==4 and b==4 or b==34:        
+            print(f"{a}%{b} is :",78)
+         else:
+            print(f"{a}%{b} is :",a%b)
+      elif c=="Q": 
+            break  
+      else:
+         print("please Enter valid operator for operation")    
+elif kk=="Q":
+       quit()
+       
+
+       
+
          
          
  

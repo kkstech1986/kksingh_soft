@@ -1,32 +1,20 @@
 """pickle and use requests module to download the iris dataset"""
 
-import json
-from typing import Type
+from matplotlib.pyplot import text
 import requests
 import pickle
-irisList=requests.get("https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data")
-#print(irisList.text)
 
-# file="irisDatalist.txt"
-# fileobj=open(file,'w')
-# fileobj.writelines(irisList.text)
-# fileobj.close()
+data=requests.get("https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data").text
 
-file="irisDatalist.txt"
-fileobj=open(file,"r")
-kks=fileobj.readlines()
-fileobj.close()
-print(kks)
-print(type(kks))
+# print(irisList.text)
+# l1=data.split("\n")
+# #print(l1)
+# l2=[item.split(",")for item in l1 if len(item)!=0]
+# #print(l2)
+# with open("myIris.pkl",'wb') as f:
+#     pickle.dump(l2,f)
 
-file1="irisData.pkl"
-filobj1=open(file1,"wb")
-pickle.dump(kks,filobj1)
-fileobj.close()
 
-file1="irisData.pkl"
-filobj1=open(file1,"rb")
-mydata=pickle.load(filobj1)
-fileobj.close()
-print(mydata)
-print(type(mydata))
+file="myIris.pkl"
+with open("myIris.pkl",'rb') as f:
+    print(pickle.load(f))
